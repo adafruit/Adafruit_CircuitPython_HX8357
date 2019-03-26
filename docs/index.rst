@@ -23,8 +23,8 @@ Table of Contents
 .. toctree::
     :caption: Tutorials
 
-.. todo:: Add any Learn guide links here. If there are none, then simply delete this todo and leave
-    the toctree above for use later.
+    Adafruit 3.5" 320x480 Color TFT Touchscreen Breakout <https://learn.adafruit.com/adafruit-3-5-color-320x480-tft-touchscreen-breakout>
+    Adafruit 3.5" 480x320 TFT FeatherWing <https://learn.adafruit.com/adafruit-3-5-tft-featherwing>
 
 .. toctree::
     :caption: Related Products
