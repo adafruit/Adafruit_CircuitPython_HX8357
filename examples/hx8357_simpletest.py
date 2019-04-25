@@ -8,8 +8,8 @@ import displayio
 from adafruit_hx8357 import HX8357
 
 spi = board.SPI()
-tft_cs = board.D5
-tft_dc = board.D6
+tft_cs = board.D9
+tft_dc = board.D10
 
 displayio.release_displays()
 display_bus = displayio.FourWire(spi, command=tft_dc, chip_select=tft_cs)

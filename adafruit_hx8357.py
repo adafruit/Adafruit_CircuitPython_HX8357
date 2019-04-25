@@ -51,7 +51,7 @@ __version__ = "0.0.0-auto.0"
 __repo__ = "https://github.com/adafruit/Adafruit_CircuitPython_HX8357.git"
 
 _INIT_SEQUENCE = (
-    b"\x01\x80\x0A"             # _SWRESET and Delay 10ms
+    b"\x01\x80\x64"             # _SWRESET and Delay 100ms
     b"\xB9\x83\xFF\x83\x57\xFF" # _SETC and delay 500ms
     b"\xB3\x04\x80\x00\x06\x06" # _SETRGB 0x80 enables SDO pin (0x00 disables)
     b"\xB6\x01\x25"             # _SETCOM -1.52V
