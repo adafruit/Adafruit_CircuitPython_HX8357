@@ -9,8 +9,8 @@ Introduction
     :target: https://discord.gg/nBQh6qu
     :alt: Discord
 
-.. image:: https://travis-ci.com/adafruit/Adafruit_CircuitPython_HX8357.svg?branch=master
-    :target: https://travis-ci.com/adafruit/Adafruit_CircuitPython_HX8357
+.. image:: https://github.com/adafruit/Adafruit_CircuitPython_HX8357/workflows/Build%20CI/badge.svg
+    :target: https://github.com/adafruit/Adafruit_CircuitPython_HX8357/actions/
     :alt: Build Status
 
 displayio Driver for HX8357 Displays such as the 3.5-inch TFT FeatherWing and Breakout
