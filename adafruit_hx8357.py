@@ -32,6 +32,8 @@ Implementation Notes
 
 **Hardware:**
 
+* 3.5" PiTFT Plus 480x320 3.5" TFT+Touchscreen for Raspberry Pi:
+  <https://www.adafruit.com/product/2441>
 * 3.5" TFT 320x480 + Touchscreen Breakout Board w/MicroSD Socket:
   <https://www.adafruit.com/product/2050>
 * Adafruit TFT FeatherWing - 3.5" 480x320 Touchscreen for Feathers:
