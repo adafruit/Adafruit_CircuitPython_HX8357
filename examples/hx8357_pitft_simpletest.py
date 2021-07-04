@@ -24,7 +24,7 @@ display_bus = displayio.FourWire(spi, command=tft_dc, chip_select=tft_cs)
 display = HX8357(display_bus, width=480, height=320)
 
 # Make the display context
-splash = displayio.Group(max_size=10)
+splash = displayio.Group()
 display.show(splash)
 
 color_bitmap = displayio.Bitmap(display.width, display.height, 1)
@@ -42,7 +42,7 @@ inner_sprite = displayio.TileGrid(inner_bitmap, pixel_shader=inner_palette, x=20
 splash.append(inner_sprite)
 
 # Draw a label
-text_group = displayio.Group(max_size=10, scale=3, x=137, y=160)
+text_group = displayio.Group(scale=3, x=137, y=160)
 text = "Hello World!"
 text_area = label.Label(terminalio.FONT, text=text, color=0xFFFF00)
 text_group.append(text_area)  # Subgroup for text scaling
