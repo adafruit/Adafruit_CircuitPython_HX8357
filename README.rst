@@ -45,7 +45,7 @@ Usage Example
     display = HX8357(display_bus, width=480, height=320)
 
     # Make the display context
-    splash = displayio.Group(max_size=10)
+    splash = displayio.Group()
     display.show(splash)
 
     color_bitmap = displayio.Bitmap(480, 320, 1)
