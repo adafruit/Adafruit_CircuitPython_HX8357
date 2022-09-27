@@ -60,5 +60,5 @@ _INIT_SEQUENCE = (
 class HX8357(displayio.Display):
     """HX8357D driver"""
 
-    def __init__(self, bus, **kwargs):
+    def __init__(self, bus: displayio.FourWire, **kwargs) -> None:
         super().__init__(bus, _INIT_SEQUENCE, **kwargs)
