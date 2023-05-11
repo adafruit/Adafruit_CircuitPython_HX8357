@@ -56,6 +56,7 @@ _INIT_SEQUENCE = (
     b"\x29\x80\x32"  # _DISPON and delay 50 ms
 )
 
+
 # pylint: disable=too-few-public-methods
 class HX8357(displayio.Display):
     """HX8357D driver"""
