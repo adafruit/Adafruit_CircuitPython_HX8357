@@ -26,6 +26,9 @@ Implementation Notes
 
 * Adafruit CircuitPython firmware for the supported boards:
   https://github.com/adafruit/circuitpython/releases
+
+** Datasheet:**
+  https://cdn-shop.adafruit.com/datasheets/HX8357-D_DS_April2012.pdf
 """
 
 # imports
@@ -40,7 +43,7 @@ _INIT_SEQUENCE = (
     b"\xB9\x83\xFF\x83\x57\xFF"  # _SETC and delay 500ms
     b"\xB3\x04\x80\x00\x06\x06"  # _SETRGB 0x80 enables SDO pin (0x00 disables)
     b"\xB6\x01\x25"  # _SETCOM -1.52V
-    b"\xB0\x01\x68"  # _SETOSC Normal mode 70Hz, Idle mode 55 Hz
+    b"\xB0\x01\x66"  # _SETOSC Normal mode 60Hz, Idle mode 60 Hz
     b"\xCC\x01\x05"  # _SETPANEL BGR, Gate direction swapped
     b"\xB1\x06\x00\x15\x1C\x1C\x83\xAA"  # _SETPWR1 Not deep standby BT VSPR VSNR AP
     b"\xC0\x06\x50\x50\x01\x3C\x1E\x08"  # _SETSTBA OPON normal OPON idle STBA GEN
