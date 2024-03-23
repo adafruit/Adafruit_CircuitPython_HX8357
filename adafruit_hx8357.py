@@ -30,7 +30,19 @@ Implementation Notes
 
 # imports
 
-import displayio
+try:
+    # used for typing only
+    from typing import Any
+except ImportError:
+    pass
+
+# Support both 8.x.x and 9.x.x. Change when 8.x.x is discontinued as a stable release.
+try:
+    from fourwire import FourWire  # 9.x method
+    from busdisplay import BusDisplay
+except ImportError:
+    from displayio import FourWire  # 8.x method
+    from displayio import Display as BusDisplay
 
 __version__ = "0.0.0+auto.0"
 __repo__ = "https://github.com/adafruit/Adafruit_CircuitPython_HX8357.git"
@@ -58,8 +70,8 @@ _INIT_SEQUENCE = (
 
 
 # pylint: disable=too-few-public-methods
-class HX8357(displayio.Display):
+class HX8357(BusDisplay):
     """HX8357D driver"""
 
-    def __init__(self, bus: displayio.FourWire, **kwargs) -> None:
+    def __init__(self, bus: FourWire.FourWire, **kwargs) -> None:
         super().__init__(bus, _INIT_SEQUENCE, **kwargs)
