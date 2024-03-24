@@ -29,14 +29,7 @@ Implementation Notes
 """
 
 # imports
-
-try:
-    # used for typing only
-    from typing import Any
-except ImportError:
-    pass
-
-# Support both 8.x.x and 9.x.x. Change when 8.x.x is discontinued as a stable release.
+# Support both 8.x.x and 9.x.x. Removed 8.x method when discontinued.
 try:
     from fourwire import FourWire  # 9.x method
     from busdisplay import BusDisplay
