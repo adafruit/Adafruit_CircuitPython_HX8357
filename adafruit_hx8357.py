@@ -29,7 +29,7 @@ Implementation Notes
 """
 
 # imports
-# Support both 8.x.x and 9.x.x. Removed 8.x method when discontinued.
+# Support both 8.x.x and 9.x.x. Remove 8.x method when discontinued.
 try:
     from fourwire import FourWire  # 9.x method
     from busdisplay import BusDisplay
@@ -66,5 +66,5 @@ _INIT_SEQUENCE = (
 class HX8357(BusDisplay):
     """HX8357D driver"""
 
-    def __init__(self, bus: FourWire.FourWire, **kwargs) -> None:
+    def __init__(self, bus: FourWire, **kwargs) -> None:
         super().__init__(bus, _INIT_SEQUENCE, **kwargs)
