@@ -37,6 +37,14 @@ Usage Example
 
     import board
     import displayio
+
+    # Compatibility with both CircuitPython 8.x.x and 9.x.x.
+    # Remove after 8.x.x is no longer a supported release.
+    try:
+        from fourwire import FourWire
+    except ImportError:
+        from displayio import FourWire
+
     from adafruit_hx8357 import HX8357
 
     spi = board.SPI()
@@ -44,7 +52,7 @@ Usage Example
     tft_dc = board.D10
 
     displayio.release_displays()
-    display_bus = displayio.FourWire(spi, command=tft_dc, chip_select=tft_cs)
+    display_bus = FourWire(spi, command=tft_dc, chip_select=tft_cs)
 
     display = HX8357(display_bus, width=480, height=320)
 
