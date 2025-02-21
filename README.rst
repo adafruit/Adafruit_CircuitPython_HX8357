@@ -13,9 +13,9 @@ Introduction
     :target: https://github.com/adafruit/Adafruit_CircuitPython_HX8357/actions/
     :alt: Build Status
 
-.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
-    :target: https://github.com/psf/black
-    :alt: Code Style: Black
+.. image:: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json
+    :target: https://github.com/astral-sh/ruff
+    :alt: Code Style: Ruff
 
 displayio Driver for HX8357 Displays such as the 3.5-inch TFT FeatherWing and Breakout
 
@@ -37,6 +37,7 @@ Usage Example
 
     import board
     import displayio
+    from fourwire import FourWire
     from adafruit_hx8357 import HX8357
 
     spi = board.SPI()
@@ -44,7 +45,7 @@ Usage Example
     tft_dc = board.D10
 
     displayio.release_displays()
-    display_bus = displayio.FourWire(spi, command=tft_dc, chip_select=tft_cs)
+    display_bus = FourWire(spi, command=tft_dc, chip_select=tft_cs)
 
     display = HX8357(display_bus, width=480, height=320)
 
